@@ -70,13 +70,13 @@ function LandingPage() {
             Result
           </h1>
           <div className="tw-grid lg:tw-grid-cols-3 md:tw-grid-cols-2 tw-grid-cols-1">
-            <img src="After_before_1.jpg" className=" tw-my-2" />
-            <img src="After_before_2.jpg" className=" tw-my-2" />
-            <img src="After_before_3.jpg" className=" tw-my-2" />
-            <img src="After_before_4.jpg" className=" tw-my-2" />
-            <img src="After_before_5.jpg" className=" tw-my-2" />
-            <img src="After_before_8.jpg" className=" tw-my-2" />
-            <img src="After_before_9.jpg" className=" tw-my-2" />
+            <img src="After_Before_1.jpg" className=" tw-my-2" />
+            <img src="After_Before_2.jpg" className=" tw-my-2" />
+            <img src="After_Before_3.jpg" className=" tw-my-2" />
+            <img src="After_Before_4.jpg" className=" tw-my-2" />
+            <img src="After_Before_5.jpg" className=" tw-my-2" />
+            <img src="After_Before_8.jpg" className=" tw-my-2" />
+            <img src="After_Before_9.jpg" className=" tw-my-2" />
           </div>
         </section>
 
