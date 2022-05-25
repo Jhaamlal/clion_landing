@@ -47,15 +47,15 @@ function LandingPage() {
   }
   return (
     <div className="tw-font-serif">
-      <nav className="tw-flex tw-justify-between tw-px-3 md:tw-px-5 tw-py-5 tw-bg-slate-200">
+      <nav className="tw-flex tw-justify-between tw-px-3 md:tw-px-5 tw-py-5 tw-bg-clion-gray">
         <img src="Logo.png" alt="" className="tw-w-28" />
         <button className="tw-bg-red-600 tw-px-4 tw-py-1.5 tw-rounded tw-shadow tw-text-white tw-font-semibold">
           <a href="#form">BOOK NOW</a>
         </button>
       </nav>
       <main>
-        <section className="tw-min-h-screen tw-flex tw-justify-center md:tw-justify-start  tw-items-center part-2 tw-px-6 md:tw-px-8 lg:tw-px-10">
-          <h1 className="tw-flex tw-flex-col tw-px-3 tw-py-5  tw-bg-transparent tw-rounded-md">
+        <section className="tw-max-h-screen md:tw-min-h-screen tw-flex tw-justify-center md:tw-justify-start  tw-items-center part-2 tw-px-6 md:tw-px-8 lg:tw-px-10 tw-relative md:tw-static">
+          <h1 className="tw-flex tw-flex-col tw-px-3 md:tw-py-5 tw-bottom-0 tw-bg-transparent tw-rounded-md tw-absolute md:tw-static">
             <span className="tw-text-4xl tw-font-semibold tw-text-red-600">
               100% guarantee of Result
             </span>
@@ -91,7 +91,7 @@ function LandingPage() {
         </section>
 
         <section className="tw-py-6 tw-px-8">
-          <h1 className="tw-mb-6 tw-text-4xl tw-text-red-500 tw-text-center md:tw-my-8 tw-my-4">
+          <h1 className="tw-mb-6 tw-text-4xl tw-text-clion-red tw-text-center md:tw-my-8 tw-my-4">
             Hair transplant
           </h1>
           <Faq />
@@ -118,13 +118,13 @@ function LandingPage() {
             feedback="Great counsling which remove my fear"
           />
         </section>
-        <section id="form" className="tw-mx-2">
-          <h1 className="tw-text-red-600 tw-text-4xl tw-font-bold tw-text-center tw-my-4 ">
+        <section id="form" className="tw-mx-2 ">
+          <h1 className="tw-text-red-600 tw-text-4xl tw-font-bold tw-text-center tw-my-4 tw-mt-8 ">
             Know Your Hair Transplant Cost !
           </h1>
-          <div className="tw-min-w-full tw-bg-slate-400  tw-rounded-3xl">
+          <div className="tw-min-w-full tw-bg-clion-gray  tw-rounded-3xl">
             <input
-              className="tw-w-[90%] md:tw-w-[60%] tw-h-16 tw-rounded-full tw-bg-red-300 tw-my-6 tw-text-center md:tw-ml-60  tw-ml-4"
+              className="tw-w-[90%] md:tw-w-[60%] tw-h-16 tw-rounded-full  tw-bg-white tw-my-6 tw-text-center md:tw-ml-60  tw-ml-4"
               type={"text"}
               placeholder="Your Name"
               value={customer.name}
@@ -137,7 +137,7 @@ function LandingPage() {
             />
 
             <input
-              className="tw-w-[90%]  md:tw-w-[60%] tw-h-16 tw-rounded-full tw-bg-red-300 tw-my-6 tw-text-center md:tw-ml-60 tw-ml-4"
+              className="tw-w-[90%]  md:tw-w-[60%] tw-h-16 tw-rounded-full  tw-bg-white tw-my-6 tw-text-center md:tw-ml-60 tw-ml-4"
               type={"tel"}
               placeholder="Your number"
               onInput={(e) =>
@@ -149,7 +149,7 @@ function LandingPage() {
             />
 
             <input
-              className="tw-w-[90%] md:tw-w-[60%] tw-h-16 tw-rounded-full tw-bg-red-300 tw-my-6 tw-text-center md:tw-ml-60 tw-ml-4"
+              className="tw-w-[90%] md:tw-w-[60%] tw-h-16 tw-rounded-full  tw-bg-white tw-my-6 tw-text-center md:tw-ml-60 tw-ml-4"
               placeholder="Your age"
               type={"number"}
               onInput={(e) =>
@@ -160,7 +160,7 @@ function LandingPage() {
               }
             />
 
-            <p className="tw-text-white tw-shadow-md tw-text-center tw-text-2xl tw-capitalize">
+            <p className="tw-text-black tw-shadow-md tw-text-center tw-text-2xl tw-capitalize">
               Click on image
             </p>
             <div className="tw-grid lg:tw-grid-cols-4 md:tw-grid-cols-4 tw-grid-cols-2 tw-w-full ">
@@ -294,7 +294,7 @@ function LandingPage() {
             <button
               type="submit"
               onClick={submitData}
-              className="tw-bg-red-600 tw-text-white tw-border-2 tw-text-center tw-font-bold tw-w-[50%] tw-h-12 tw-my-4 tw-ml-[20%] md:tw-px-4"
+              className="tw-bg-clion-red tw-text-white tw-border-2 tw-text-center tw-font-bold tw-w-[50%] tw-h-12 tw-my-4 tw-ml-[20%] md:tw-px-4"
             >
               {" "}
               submit
