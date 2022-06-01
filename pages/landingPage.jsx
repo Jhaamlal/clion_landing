@@ -1,21 +1,49 @@
 import ElementOne from "../components/ElementOne"
 import Customer from "../components/Customer"
 import useHasMounted from "../components/useHasMounted"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Faq from "../components/Faq"
 import { db } from "../components/firebase"
 import { useRouter } from "next/router"
 import { collection, addDoc, Timestamp } from "firebase/firestore"
+import useModalContext from "../components/context/ModalContext"
+
+function FormButton() {
+  const modalCtx = useModalContext()
+  return (
+    <>
+      <p className="tw-text-center tw-font-semibold tw-text-xl tw-mb-2 ">
+        {" "}
+        Get Free consultation
+      </p>
+      <button
+        onClick={() => modalCtx.hideModal()}
+        className="tw-bg-red-600 tw-px-4 tw-py-1.5 tw-rounded tw-shadow tw-text-white tw-font-semibold  tw-text-center md:tw-ml-28 tw-ml-8 "
+      >
+        <a href="#form">BOOK NOW</a>
+      </button>
+    </>
+  )
+}
 
 function LandingPage() {
   const hasMounted = useHasMounted()
   const router = useRouter()
+  const modalCtx = useModalContext()
+
   const [customer, setCustomer] = useState({
     name: "",
     age: "",
     mobile: "",
     baldness: "",
   })
+
+  useEffect(() => {
+    let timeout = setTimeout(() => {
+      modalCtx.showModalWithContent(<FormButton />)
+    }, 10000)
+    return () => clearTimeout(timeout)
+  }, [])
   if (!hasMounted) {
     return null
   }
@@ -43,8 +71,10 @@ function LandingPage() {
     } catch (error) {
       alert(error)
     }
-    console.log(customer)
   }
+
+  // use Effect and time
+
   return (
     <div className="tw-font-serif">
       <nav className="tw-flex tw-justify-between tw-px-3 md:tw-px-5 tw-py-5 tw-bg-clion-gray">
@@ -79,7 +109,6 @@ function LandingPage() {
             <img src="After_Before_9.jpg" className=" tw-my-2" />
           </div>
         </section>
-
         <section>
           <h1 className="tw-text-center tw-font-bold tw-text-red-500 tw-my-4 tw-text-3xl  ">
             Why Clion care ?
